@@ -1,0 +1,68 @@
+.header
+  background-color: #409b04
+  height: 70px
+  @media screen and ( max-width:  678px)
+    display: flex
+    flex-direction: row-reverse
+  .toggle-btn
+    display: none
+    border-radius: 12px
+    background-color: #56595c
+    cursor: pointer
+    width: 25px
+    height: 28px
+    align-self: center
+    padding: 10px
+    @media screen and ( max-width:  678px)
+      display: block
+      margin-right: 22px
+    &:hover
+      background-color: #252627
+      span
+        background-color: #252627
+    span
+      display: block
+      margin: 4px 0
+      width: 25px
+      height: 4px
+      background-color: #cacaca
+      transition: all 0.5s
+    &.oppened
+      padding: 13px 10px 7px
+      background-color: #252627
+
+      span
+        background-color: #fafafa
+
+      span:first-of-type
+        transform: translate(0, 100%) rotate(45deg)
+      span:nth-of-type(2)
+        display: none
+      span:nth-of-type(3)
+        transform: translate(0, -100%) rotate(-45deg)
+
+      &:hover
+        background-color: #56595c
+        span
+          background-color: #cacaca
+  .menu
+    display: flex
+    flex-direction: row
+    justify-content: space-evenly
+    height: inherit
+    list-style: none
+    @media (max-width: 678px)
+      display: none
+    &__item
+      display: flex
+      //padding: 25px 20px
+      &:hover
+        background-color: #51ff00
+      a
+        display: block
+        margin: 25px 20px
+        text-decoration: none
+        //height: 100%
+        color: #000000
+        display: block
+        align-self: center

@@ -1,0 +1,199 @@
+*
+  margin: 0
+  padding: 0
+
+.submit
+  display: block
+  margin: 10px auto
+  border-radius: 5px
+  padding: 10px
+  font-size: 14px
+  cursor: pointer
+hr
+  margin: 10px 0
+  height: 2px
+  background-color: black
+  border: none
+  width: 100%
+
+body
+  background-color: #b3cbd1
+  font-size: 20px
+  font-family: 'Roboto', sans-serif
+
+@import 'header'
+@import 'add-new-words'
+@import 'dictionary-list'
+
+.training-word
+  margin: 100px auto
+  display: flex
+  flex-direction: row
+  justify-content: space-evenly
+  flex-wrap: wrap
+  @media (max-width: 720px)
+    margin: 50px auto
+  &__training
+    width: 400px
+    height: 300px
+    background-color: #4c57b9
+    margin: 10px
+    border-radius: 10px
+    cursor: pointer
+    @media (max-width: 720px)
+      width: 300px
+      height: 200px
+    a
+      display: flex
+      flex-direction: column
+      align-content: stretch
+      background-color: #4c57b9
+      width: 100%
+      height: 100%
+      border-radius: 10px
+      text-decoration: none
+      color: #f0dcdc
+
+      &:hover
+        animation-duration: 0.75s
+        animation-name: slidein
+        color: #a4ff80
+
+    .training-info
+      display: flex
+      flex-direction: column
+      justify-content: space-evenly
+      padding: 20px
+      font-size: 20px
+      .training-name
+        .name
+          display: block
+        .cls
+          display: block
+          font-size: 15px
+      img
+        display: block
+        margin-left: auto
+        margin-right: 0
+        width: 200px
+        height: 200px
+        @media (max-width: 876px)
+          width: 150px
+          height: 150px
+        @media (max-width: 762px)
+          display: none
+
+.training-popup
+  display: none
+  position: absolute
+  top: 0
+  width: 100%
+  height: 100%
+  cursor: pointer
+  background-color: #0000007e
+  &_opened
+    display: block
+.training-area
+  position: relative
+  display: flex
+  align-self: center
+  width: 70%
+  height: 70%
+  margin: 100px auto 0
+  padding: 50px 50px
+  cursor: default
+  background-color: #c0c0c0
+  display: flex
+  flex-direction: column
+  overflow: scroll
+  .training-header
+    display: block
+    align-self: center
+    margin-bottom: 15px
+  .training-result
+    display: none
+    flex-direction: column
+    align-content: center
+    &_show
+      display: flex
+
+    span
+      display: block
+      align-self: center
+      margin-bottom: 5px
+    .correct
+      color: green
+    .wrong
+      color: red
+
+  .training-tasks
+    display: flex
+    flex-direction: column
+    &__item
+      display: flex
+      flex-direction: row
+      justify-content: space-evenly
+      align-items: center
+      border: 1px dashed black
+      padding: 2px
+      margin-bottom: 10px
+      label
+        display: block
+        font-size: 20px
+        margin-left: auto
+        width: 50%
+        align-self: center
+        
+
+      input
+        display: block
+        font-size: 15px
+        padding: 2px
+        margin-right: 0
+        width: 50%
+        align-self: flex-end
+
+      &_correct
+        border-color: green
+        color: green
+      &_wrong
+        border-color: red
+        color: red
+
+    &__item-test
+      display: flex
+      flex-direction: column
+      justify-content: space-evenly
+      border: 1px dashed black
+      padding: 2px
+      margin-bottom: 10px
+      .question
+        margin-bottom: 10px
+      .answer-options
+        display: flex
+        justify-content: space-between
+        flex-flow: row wrap
+        align-items: flex-start
+        .option
+          display: flex
+
+          margin-right: 5px
+          label
+            display: block
+            margin-right: 5px
+          input
+            display: block
+            align-self: center
+      &_correct
+        border-color: green
+        color: green
+      &_wrong
+        border-color: red
+        color: red
+    
+
+@keyframes slidein
+  from
+    color: #f0dcdc
+  to
+    color: #a4ff80

@@ -1,0 +1,73 @@
+.add-new-words
+  display: flex
+  flex-direction: column
+  justify-content: space-evenly
+  border-radius: 5px
+  background-color: #116074
+  width: max-content
+  margin: 100px auto
+  padding: 10px
+  color: #ffffff
+  &__with-form
+    display: flex
+    flex-direction: column
+    justify-content: space-evenly
+    padding: 10px
+    .new-word
+      display: flex
+      flex-direction: row
+      justify-content: center
+      @media (max-width: 720px)
+        flex-direction: column
+      .word
+        display: flex
+        flex-direction: column
+        padding: 5px
+        label
+          align-self: center
+          margin-bottom: 10px
+        input
+          align-self: center
+          border-radius: 5px
+          margin: 0 auto
+          font-size: 14px
+          padding: 2px
+    button
+      align-self: center
+
+  &__with-file
+    display: flex
+    flex-direction: column
+    padding: 10px
+    color: #000
+    font-size: 18px
+    .drop-file-field
+      .drag-and-drop-field
+        display: flex
+        flex-direction: column
+        justify-content: space-evenly
+        padding: 10px
+        margin-bottom: 10px
+        background-color: #eeeeee
+        border: #999 5px dashed
+        p
+          align-self: center
+          margin-bottom: 7px
+        #selectfile
+          display: none
+      .upload-results
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        list-style: none
+        &__item
+          display: flex
+          flex-direction: row
+          align-self: center
+          span
+            display: block
+            margin: 0 5px
+        .success
+          color: #1aff00
+        .error
+          color: #910000
